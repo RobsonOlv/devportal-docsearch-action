@@ -1,18 +1,19 @@
-name: Test the Action
-
-on:
-  - push
+on: [push]
 
 jobs:
-  example_job:
+  hello_world_job:
     runs-on: ubuntu-latest
-    name: test the action
+    name: A job to say hello
     steps:
-      - uses: actions/checkout@v2
-      - name: test
-        uses: ./
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Hello world action step
+        uses: ./ # Uses an action in the root directory
+        id: hello
         with:
-          algolia_api_key: ${{ secrets.ALGOLIA_API_KEY }}
-          algolia_application_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-          # needs to be inside $GITHUB_WORKSPACE from actions/checkout step
-          file: config.example.json
+          who-to-greet: 'Mona the Octocat'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
