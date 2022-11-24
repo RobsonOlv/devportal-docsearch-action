@@ -22,5 +22,7 @@ echo "APPLICATION_ID=${APPLICATION_ID}
 API_KEY=${API_KEY}
 " > .env
 
+echo "🚀 Successfully indexed and uploaded the results to Algolia"
+
 # run algolia docsearch
 exec python docsearch run $GITHUB_WORKSPACE/$FILE
