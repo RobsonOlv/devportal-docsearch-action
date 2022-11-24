@@ -17,6 +17,10 @@ pip3 install pipenv==2018.11.26
 # install packages without virtualenv
 pipenv install --system --deploy --ignore-pipfile
 
+PIPENV_VENV_IN_PROJECT=true pipenv shell
+
+ls
+
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
 API_KEY=${API_KEY}
