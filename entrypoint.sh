@@ -19,7 +19,7 @@ pipenv install --system --deploy --ignore-pipfile
 
 ls
 
-PIPENV_VENV_IN_PROJECT=true pipenv run docsearch
+PIPENV_VENV_IN_PROJECT=true pipenv run ./docsearch
 
 
 
