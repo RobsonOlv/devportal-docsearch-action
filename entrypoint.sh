@@ -17,6 +17,8 @@ pip3 install pipenv==2018.11.26
 # install packages without virtualenv
 pipenv install --system --deploy --ignore-pipfile
 
+python -m pip install python-dotenv
+
 ls
 
 PIPENV_VENV_IN_PROJECT=true pipenv run ./docsearch
