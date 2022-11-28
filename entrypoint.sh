@@ -35,7 +35,7 @@ PIPENV_VENV_IN_PROJECT=true pipenv install
 
 ls 
 echo "##################"
-pipenv run ./docsearch run ./config_md.json
+pipenv run ./docsearch
 # pipenv shell
 # ./docsearch
 
