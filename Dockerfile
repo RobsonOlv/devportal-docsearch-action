@@ -9,12 +9,6 @@ RUN apt-get update -y && apt-get install -yq \
   libgconf-2-4 \
   default-jdk
 
-RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add
-RUN echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
-RUN apt-get update -y && apt-get install -yq \
-  google-chrome-stable=106.0.5249.119-1 \
-  unzip
-
 RUN wget -q https://chromedriver.storage.googleapis.com/106.0.5249.61/chromedriver_linux64.zip
 
 RUN unzip chromedriver_linux64.zip
