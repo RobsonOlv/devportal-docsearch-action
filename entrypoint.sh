@@ -21,12 +21,12 @@ pip3 install pipenv==2018.11.26
 # export "/usr/local/lib/python3.6/site-packages/"
 ls
 
-PIPENV_VENV_IN_PROJECT=true pipenv install
-
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
 API_KEY=${API_KEY}
 " > .env
+
+PIPENV_VENV_IN_PROJECT=true pipenv install
 
 pipenv run ./docsearch
 
