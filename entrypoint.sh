@@ -30,6 +30,8 @@ ls
 
 PIPENV_VENV_IN_PROJECT=true pipenv install
 
+pipenv shell
+./docsearch
 pipenv run ./docsearch
 
 
