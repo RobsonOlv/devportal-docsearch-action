@@ -28,8 +28,11 @@ echo "APPLICATION_ID=${APPLICATION_ID}
 API_KEY=${API_KEY}
 " > .env
 
+echo "work here"
 
 pipenv run ./docsearch
+
+echo "work here"
 
 echo "🚀 Successfully indexed and uploaded the results to Algolia"
 
