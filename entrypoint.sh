@@ -17,12 +17,13 @@ pip3 install pipenv==2018.11.26
 # install packages without virtualenv
 pipenv install --system --deploy --ignore-pipfile
 
-pip install python-dotenv
-python3 -m pip install python-dotenv
+pipenv install python-dotenv
 
+python3 -m pip install python-dotenv
+export "/usr/local/lib/python3.6/site-packages/"
 ls
 
-PIPENV_VENV_IN_PROJECT=true pipenv run ./docsearch
+PIPENV_VENV_IN_PROJECT=true pipenv run
 
 
 
