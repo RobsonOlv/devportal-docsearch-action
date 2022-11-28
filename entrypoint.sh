@@ -24,7 +24,12 @@ pip3 install pipenv==2018.11.26
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
 API_KEY=${API_KEY}
+CHROMEDRIVER_PATH=/usr/bin/chromedriver
+CONFIG=config_md.json
 " > .env
+
+value=`cat .env`
+echo "$value"
 
 ls
 
