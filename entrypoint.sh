@@ -22,10 +22,9 @@ pip3 install pipenv==2018.11.26
 ls
 
 PIPENV_VENV_IN_PROJECT=true pipenv install --system --deploy --ignore-pipfile
-
 # pipenv install python-dotenv
-
-pipenv run ./docsearch
+pipenv shell
+./docsearch
 
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
