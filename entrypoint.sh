@@ -30,7 +30,7 @@ API_KEY=${API_KEY}
 
 echo "work here"
 
-pipenv run ./docsearch
+./docsearch
 
 echo "work here"
 
