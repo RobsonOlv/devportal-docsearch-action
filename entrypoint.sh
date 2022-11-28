@@ -34,7 +34,7 @@ echo "$value"
 ls
 
 PIPENV_VENV_IN_PROJECT=true pipenv install
-
+echo "##################"
 pipenv run ./docsearch run config_md.json
 # pipenv shell
 # ./docsearch
