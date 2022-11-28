@@ -11,7 +11,7 @@ inputs:
     description: 'Algolia docsearch API_KEY'
     required: true
   file:
-    description: 'File path to docsearch'
+    description: 'File path to config'
     required: true
 runs:
   using: 'docker'
