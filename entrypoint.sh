@@ -19,8 +19,8 @@ pipenv install --system --deploy --ignore-pipfile
 
 pipenv install python-dotenv
 
-python3 -m pip install python-dotenv
-export "/usr/local/lib/python3.6/site-packages/"
+# python3 -m pip install python-dotenv
+# export "/usr/local/lib/python3.6/site-packages/"
 ls
 
 PIPENV_VENV_IN_PROJECT=true pipenv run
