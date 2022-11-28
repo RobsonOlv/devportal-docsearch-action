@@ -21,10 +21,11 @@ pip3 install pipenv==2018.11.26
 # export "/usr/local/lib/python3.6/site-packages/"
 ls
 
-PIPENV_VENV_IN_PROJECT=true pipenv install --system --deploy --ignore-pipfile
-# pipenv install python-dotenv
-pipenv shell
-./docsearch
+PIPENV_VENV_IN_PROJECT=true pipenv install
+
+pipenv run ./docsearch
+
+
 
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
