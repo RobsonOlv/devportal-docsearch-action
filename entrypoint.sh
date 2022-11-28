@@ -31,11 +31,11 @@ CONFIG=config_md.json
 value=`cat .env`
 echo "$value"
 
-ls
-
 PIPENV_VENV_IN_PROJECT=true pipenv install
+
+ls 
 echo "##################"
-pipenv run ./docsearch run config_md.json
+pipenv run ./docsearch run ./config_md.json
 # pipenv shell
 # ./docsearch
 
