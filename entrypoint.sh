@@ -23,7 +23,7 @@ pipenv install python-dotenv
 # export "/usr/local/lib/python3.6/site-packages/"
 ls
 
-PIPENV_VENV_IN_PROJECT=true pipenv run
+PIPENV_VENV_IN_PROJECT=true pipenv run ./docsearch
 
 
 
