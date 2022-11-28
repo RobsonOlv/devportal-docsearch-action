@@ -33,8 +33,9 @@ echo "$value"
 
 PIPENV_VENV_IN_PROJECT=true pipenv install
 
-ls 
-echo "##################"
+echo "Update webclient.py"
+cp ./utils/webclient.py ./.venv/lib/python3.6/site-packages/scrapy/core/downloader/
+
 pipenv run ./docsearch run ./config_md.json
 # pipenv shell
 # ./docsearch
@@ -44,5 +45,4 @@ pipenv run ./docsearch run ./config_md.json
 
 echo "🚀 Successfully indexed and uploaded the results to Algolia"
 
-# run algolia docsearch
-exec python docsearch run $GITHUB_WORKSPACE/$FILE
+# exec python docsearch run $GITHUB_WORKSPACE/$FILE
