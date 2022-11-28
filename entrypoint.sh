@@ -23,14 +23,13 @@ ls
 
 PIPENV_VENV_IN_PROJECT=true pipenv install
 
-pipenv run ./docsearch
-
-
-
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
 API_KEY=${API_KEY}
 " > .env
+
+
+pipenv run ./docsearch
 
 echo "🚀 Successfully indexed and uploaded the results to Algolia"
 
