@@ -27,7 +27,7 @@ ls
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
 API_KEY=${API_KEY}
-CHROMEDRIVER_PATH=chromedriver
+CHROMEDRIVER_PATH=/github/workspace/docsearch-scraper/chromedriver
 " > .env
 
 PIPENV_VENV_IN_PROJECT=true pipenv install
