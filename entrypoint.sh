@@ -13,6 +13,10 @@ cd docsearch-scraper/
 # install pipenv
 pip3 install pipenv==2018.11.26
 
+ldd /bin/bash | awk '/=>/{print $(NF-1)}'  | 
+ while read n; do apt-file search $n; done |
+  awk '{print $1}' | sed 's/://' | sort | uniq
+
 # download chromedriver
 
 wget -q https://chromedriver.storage.googleapis.com/106.0.5249.61/chromedriver_linux64.zip
