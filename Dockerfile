@@ -1,8 +1,7 @@
 FROM python:3.6
 
 RUN apt-get update -y && apt-get install -yq \
-    software-properties-common\
-    python3.7
+    software-properties-common
 RUN add-apt-repository -y ppa:openjdk-r/ppa
 RUN apt-get update -y && apt-get install -yq \
     curl \
