@@ -21,6 +21,7 @@ unzip chromedriver_linux64.zip
 chown root:root chromedriver
 chmod +x chromedriver
 
+apt-file update
 ldd /github/workspace/docsearch-scraper/chromedriver | awk '/=>/{print $(NF-1)}'  |  while read n; do apt-file search $n; done | awk '{print $1}' | sed 's/://' | sort | uniq
 
 # ldd /github/workspace/docsearch-scraper/chromedriver
