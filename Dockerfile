@@ -4,8 +4,6 @@ RUN apt-get update -y && apt-get install -yq \
     software-properties-common
 RUN add-apt-repository -y ppa:openjdk-r/ppa
 RUN apt-get update -y && apt-get install -yq \
-    nodejs -yq
-RUN apt-get update -y && apt-get install -yq \
   unzip \
   xvfb \
   libxi6 \
