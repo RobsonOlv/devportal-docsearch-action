@@ -13,6 +13,16 @@ cd docsearch-scraper/
 # install pipenv
 pip3 install pipenv==2018.11.26
 
+# download chromedriver
+
+wget -q https://chromedriver.storage.googleapis.com/106.0.5249.61/chromedriver_linux64.zip
+
+unzip chromedriver_linux64.zip
+
+mv chromedriver /usr/bin/chromedriver
+chown root:root /usr/bin/chromedriver
+chmod +x /usr/bin/chromedriver
+
 
 # create the .env file for docsearch
 echo "APPLICATION_ID=${APPLICATION_ID}
