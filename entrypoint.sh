@@ -25,6 +25,8 @@ ldd /github/workspace/docsearch-scraper/chromedriver | awk '/=>/{print $(NF-1)}'
  while read n; do apt-file search $n; done |
   awk '{print $1}' | sed 's/://' | sort | uniq
 
+ldd /github/workspace/docsearch-scraper/chromedriver
+
 echo "$PWD"
 ls
 
