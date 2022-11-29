@@ -6,7 +6,7 @@ COPY entrypoint.sh /entrypoint.sh
 # RUN echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list
 # RUN apt-get update -y && apt-get install -y google-chrome-stable
 
-RUN apt-get install apt-file
+RUN apt-get update -y && apt-get install -y apt-file
 
 RUN chmod +x /entrypoint.sh
 
